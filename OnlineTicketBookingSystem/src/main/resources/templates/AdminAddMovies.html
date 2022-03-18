@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Movie Details</title>
 
@@ -26,7 +26,7 @@
 <div class="container my-2  mt-3">
     <div>
         <h1 class="heading">Movie Details List</h1>
-        <a th:href="@{/showNewMovieForm}" class="nav-link" id="navItem4">Add New Movie</a>
+        <a class="nav-link" id="navItem4" th:href="@{/showNewMovieForm}">Add New Movie</a>
         <table border="1" class="table table-striped table-responsive.md">
             <thead>
             <tr>
@@ -48,14 +48,14 @@
                 <td th:text="${movie.description}"></td>
 
 
-                <td><a th:href="@{/showFormForUpdate/{id}(id=${movie.id})}" class="btn btn-success m-1">Update</td>
-                <td><a th:href="@{/deleteUser/{id}(id=${movie.id})}" class="btn btn-danger m-1">Delete</td>
+                <td><a th:href="@{/showFormForUpdate/{id}(id=${movie.id})}" class="btn btn-success m-1">Update</a></td>
+                <td><a th:href="@{/deleteUser/{id}(id=${movie.id})}" class="btn btn-danger m-1">Delete</a></td>
 
 
             </tr>
             </tbody>
         </table>
     </div>
-
+</div>
 </body>
 </html>
